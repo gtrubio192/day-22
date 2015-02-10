@@ -115,7 +115,12 @@ function checkConsonants(letterToCheck) {
 function sum(arr){
     "use strict";
     if(!_.isArray(arr))
-        throw 'Needs to be array'
+        throw 'Needs to be array';
+
+    for(var i = 0; i > arr.length; i++){
+        if(!_.isNumber(arr[i]))
+            throw 'Elements in array must be numbers';
+    }
 }
 
 function multiply(){

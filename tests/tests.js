@@ -82,7 +82,21 @@ describe('rovarspraket', function(){
 describe('sum', function(){
 	it('should only accept arrays', function(){
 		expect(function(){ sum(123) });
+		expect(function(){ sum('123') });
 	})
+	it('should only contain numbers in array', function(){
+		expect(function(){ sum([1,'a','b',8]) });
+		expect(function(){ sum([1,{foo: 'bar'} ,'b',8]) });
+	})
+	it('should only accept 1 argument', function(){
+		expect(function(){ sum([1,24,4], [1,4,2,6,9]) });
+		expect(function(){ sum() });
+	})
+	it('should add all elements in array', function(){
+		expect(sum([1,2,3,4])).to.equal(10);
+	})
+
+
 
 })
 
