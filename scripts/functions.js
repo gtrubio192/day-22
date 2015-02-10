@@ -6,9 +6,14 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
 // ---------------------
 
-function max(){
+function max(arg1, arg2){
     "use strict";
-    //...
+    if(!_.isNumber(arg1)) {
+        throw 'The first argument must be a number.';
+    } 
+    if(!_.isNumber(arg2)) {
+        throw 'The second argument must be a number.';
+    }    
 }
 
 // ---------------------
