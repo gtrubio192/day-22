@@ -33,6 +33,14 @@ function maxOfThree(a,b,c){
         throw 'The third argument must be a number.';
     }
 
+    var numbers = [a, b, c];
+    var max = a;
+    for(var i = 1; i < numbers.length; i++) {
+        if(numbers[i] > max) 
+            max = numbers[i];
+    }
+    return max;
+
 }
 
 // ---------------------
@@ -41,7 +49,7 @@ function maxOfThree(a,b,c){
 
 function isVowel(char){
     "use strict";
-    //...
+
 }
 
 // ---------------------

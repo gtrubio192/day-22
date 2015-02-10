@@ -35,4 +35,31 @@ describe('maxOfThree', function () {
 		expect(maxOfThree(0.1, 0.2, 0)).to.equal(0.2);
 		expect(maxOfThree(-1, -2, -3)).to.equal(-1);
 	});
-})
+});
+
+describe('isVowel', function(){
+	it('should accept only alphabetical input', function() {
+
+	})
+
+	it('should only consist of 1 character', function(){
+
+	})
+
+	it('should only have 1 argument', function(){
+
+	})
+
+	it('should return true if given a vowel', function(){
+		expect(isVowel(a)).to.equal(true));
+		expect(isVowel(z)).to.equal(false);
+		expect(isVowel(e)).to.equal(true));
+		expect(isVowel(i)).to.equal(true));
+		expect(isVowel(o)).to.equal(true));
+		expect(isVowel(u)).to.equal(true));
+	})
+
+
+
+});
+
