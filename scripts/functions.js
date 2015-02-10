@@ -14,15 +14,25 @@ function max(arg1, arg2){
     if(!_.isNumber(arg2)) {
         throw 'The second argument must be a number.';
     }    
+    return arg1 > arg2 ? arg1:arg2;
 }
 
 // ---------------------
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
-function maxOfThree(){
+function maxOfThree(a,b,c){
     "use strict";
-    //...
+    if(!_.isNumber(a)) {
+        throw 'The first argument must be a number.';
+    }
+    if(!_.isNumber(b)) {
+        throw 'The second argument must be a number.';
+    }
+    if(!_.isNumber(c)) {
+        throw 'The third argument must be a number.';
+    }
+
 }
 
 // ---------------------
