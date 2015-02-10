@@ -52,9 +52,9 @@ function isVowel(char1){
     var vowels = ['a','e','i','o','u'];
     var found = false;
     // not working
-    if(!_.isString(char1)){
+    if(!_.isString(char1))
         throw 'Argument must be an alphabetical character';
-    }
+    
     // not working
     console.log(char1.length);
     if(char1.length > 1){
@@ -76,16 +76,46 @@ function isVowel(char1){
 
 function rovarspraket(phrase){
     "use strict";
-    //...
+    if(!_.isString(phrase))
+        throw 'Argument passed not a string';
+    if(!_.isDefined(phrase))
+        throw 'Passed in an empty argument';
+
+    var newString = '';
+    // not working
+    for (var i = 0; i < phrase.length; i++) {
+        if (checkConsonants(phrase[i])) {
+            newString += phrase[i] + 'o' + phrase[i];
+        } 
+        else {
+            newString += phrase[i];
+        }
+    }
+
+    console.log('The "rövarspråket" result is: ' + '"' + newString + '"');
+    return newString;
+}
+
+function checkConsonants(letterToCheck) {
+    var consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+    var isConsonant = false;
+
+    for (i = 0; i < consonants.length; i++) {
+        if (letterToCheck == consonants[i]) {
+            isConsonant = true;
+        }
+    }
+    return isConsonant;
 }
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(){
+function sum(arr){
     "use strict";
-    //...
+    if(!_.isArray(arr))
+        throw 'Needs to be array'
 }
 
 function multiply(){

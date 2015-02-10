@@ -60,8 +60,30 @@ describe('isVowel', function(){
 		expect(isVowel('o')).to.equal(true);
 		expect(isVowel('u')).to.equal(true);
 	})
+});
+describe('rovarspraket', function(){
+	it('should only accept strings', function(){
+		expect(function(){ rovarspraket(123) });
+		expect(function(){ rovarspraket( {foo: 'bar'}) });
 
+	})
 
+	it('should accept only 1 argument', function(){
+		expect(function(){ rovarspraket() });
+		expect(function(){ rovarspraket('abc','xyz') });
+	})
+
+	it('should double every consonant and place an occurrence of "o" in between.', function(){
+		expect(rovarspraket('this is fun')).to.equal('tothohisos isos fofunon');
+	})
 
 });
+
+describe('sum', function(){
+	it('should only accept arrays', function(){
+		expect(function(){ sum(123) });
+	})
+
+})
+
 
