@@ -39,24 +39,26 @@ describe('maxOfThree', function () {
 
 describe('isVowel', function(){
 	it('should accept only alphabetical input', function() {
-
-	})
+		expect(function(){
+			isVowel('5');
+		}).to.throw('Argument to isVowel must be an alphabetical character');
+	});
 
 	it('should only consist of 1 character', function(){
+		expect(function() { isVowel('abcdefg'); }).to.throw('Argument must only be 1 character');
+	});
 
-	})
+	// it('should only have 1 argument', function(){
 
-	it('should only have 1 argument', function(){
-
-	})
+	// })
 
 	it('should return true if given a vowel', function(){
-		expect(isVowel(a)).to.equal(true));
-		expect(isVowel(z)).to.equal(false);
-		expect(isVowel(e)).to.equal(true));
-		expect(isVowel(i)).to.equal(true));
-		expect(isVowel(o)).to.equal(true));
-		expect(isVowel(u)).to.equal(true));
+		expect(isVowel('a')).to.equal(true);
+		expect(isVowel('z')).to.equal(false);
+		expect(isVowel('e')).to.equal(true);
+		expect(isVowel('i')).to.equal(true);
+		expect(isVowel('o')).to.equal(true);
+		expect(isVowel('u')).to.equal(true);
 	})
 
 
